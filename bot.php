@@ -9,8 +9,9 @@ Modified @ Farzain - zFz
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'YOUR-CHANNEL-ACCESS-TOKEN'; //sesuaikan 
-$channelSecret = 'YOUR-CHANNEL-SECRET-CODE';//sesuaikan
+$channelAccessToken = 'n37gl/Kv4sJ8ytzc71EidbvAQZdCRr7GzKTUmPf7zDGYZf/SdswmaWL5hFvTRV6MjQ/Fo3b6O+orefi39+7Eu9uaGS6COY+CaYge/D+u87bu51QYNGzd7/Lk2DMw48FWFTS6nJCsA1zI3U6G+u2CNwdB04t89/1O/w1cDnyilFU=
+'; //sesuaikan 
+$channelSecret = '2ea93653a5d178512d8319942b1d3b52';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -62,7 +63,7 @@ function cuaca($keyword) {
 
 //show menu, saat join dan command /menu
 if ($type == 'join' || $command == '/menu') {
-    $text = "Halo Kak ^_^\nAku Bot Prediksi Cuaca, Kamu bisa mengetahui prediksi cuaca di daerah kamu sesuai dengan sumber BMKG";
+    $text = "Halo :>\nAku Bot Prediksi Cuaca, Kamu bisa mengetahui prediksi cuaca di daerah kamu sesuai dengan sumber BMKG";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
