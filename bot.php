@@ -9,9 +9,9 @@ Modified @ Farzain - zFz
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'n37gl/Kv4sJ8ytzc71EidbvAQZdCRr7GzKTUmPf7zDGYZf/SdswmaWL5hFvTRV6MjQ/Fo3b6O+orefi39+7Eu9uaGS6COY+CaYge/D+u87bu51QYNGzd7/Lk2DMw48FWFTS6nJCsA1zI3U6G+u2CNwdB04t89/1O/w1cDnyilFU=
-'; //sesuaikan 
-$channelSecret = '2ea93653a5d178512d8319942b1d3b52';//sesuaikan
+$channelAccessToken = 'n37gl/Kv4sJ8ytzc71EidbvAQZdCRr7GzKTUmPf7zDGYZf/SdswmaWL5hFvTRV6MjQ/Fo3b6O+orefi39+7Eu9uaGS6COY+CaYge/D+u87bu51QYNGzd7/Lk2DMw48FWFTS6nJCsA1zI3U6G+u2CNwdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = '440af7b8e675fc8f13b05c647e224c7e
+';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -44,7 +44,7 @@ function cuaca($keyword) {
     $response = Unirest\Request::get("$uri");
 
     $json = json_decode($response->raw_body, true);
-    $result = "Halo Kak ^_^ Ini ada Ramalan Cuaca Untuk Daerah ";
+    $result = "Halo :> Ini ada Ramalan Cuaca Untuk Daerah ";
 	$result .= $json['name'];
 	$result .= " Dan Sekitarnya";
 	$result .= "\n\nCuaca : ";
